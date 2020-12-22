@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0321A40924E05ECD005B1650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A40824E05ECD005B1650 /* AppDelegate.swift */; };
+		0321A40B24E05ECD005B1650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A40A24E05ECD005B1650 /* SceneDelegate.swift */; };
+		0321A40D24E05ECD005B1650 /* BLEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A40C24E05ECD005B1650 /* BLEViewController.swift */; };
+		0321A40F24E05ECD005B1650 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A40E24E05ECD005B1650 /* SecondViewController.swift */; };
+		0321A41224E05ECD005B1650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0321A41024E05ECD005B1650 /* Main.storyboard */; };
+		0321A41424E05ECE005B1650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0321A41324E05ECE005B1650 /* Assets.xcassets */; };
+		0321A41724E05ECE005B1650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0321A41524E05ECE005B1650 /* LaunchScreen.storyboard */; };
+		0321A42224E05ECE005B1650 /* HomeOxygenAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A42124E05ECE005B1650 /* HomeOxygenAppTests.swift */; };
+		0321A42D24E05ECE005B1650 /* HomeOxygenAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A42C24E05ECE005B1650 /* HomeOxygenAppUITests.swift */; };
+		0321A43E24E11EC0005B1650 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A43D24E11EC0005B1650 /* DeviceTableViewCell.swift */; };
+		0321A44024E11ED6005B1650 /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321A43F24E11ED6005B1650 /* DeviceTableViewCell.xib */; };
+		0321A44324E129E1005B1650 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44224E129E1005B1650 /* UIColor.swift */; };
+		0321A44624E141F1005B1650 /* DevicePeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44524E141F1005B1650 /* DevicePeripheral.swift */; };
+		0321A44824E161B6005B1650 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44724E161B6005B1650 /* DeviceViewController.swift */; };
+		0321A44A24E167F8005B1650 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44924E167F8005B1650 /* LoginViewController.swift */; };
+		0321A44C24E279D0005B1650 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0321A44B24E279D0005B1650 /* GoogleService-Info.plist */; };
+		0321A44E24E27C66005B1650 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44D24E27C65005B1650 /* LoginVC.swift */; };
+		0321A45024E27E91005B1650 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44F24E27E91005B1650 /* UIViewController.swift */; };
+		038C286124E2872C00A125E3 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038C286024E2872C00A125E3 /* TabBarVC.swift */; };
+		7AA7A74ECC37614C8A0C28A7 /* Pods_HomeOxygenAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24207AB095125344B4A2E642 /* Pods_HomeOxygenAppTests.framework */; };
+		9F0CF4F4709BF98FBF634627 /* Pods_HomeOxygenApp_HomeOxygenAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0BB691CCB642CE58E20085 /* Pods_HomeOxygenApp_HomeOxygenAppUITests.framework */; };
+		FE9F63DDC093FB438ADE8415 /* Pods_HomeOxygenApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF6AE69ACE5B2E106C8973A /* Pods_HomeOxygenApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0321A41E24E05ECE005B1650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0321A3FD24E05ECD005B1650 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0321A40424E05ECD005B1650;
+			remoteInfo = HomeOxygenApp;
+		};
+		0321A42924E05ECE005B1650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0321A3FD24E05ECD005B1650 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0321A40424E05ECD005B1650;
+			remoteInfo = HomeOxygenApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0321A40524E05ECD005B1650 /* HomeOxygenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeOxygenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0321A40824E05ECD005B1650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0321A40A24E05ECD005B1650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0321A40C24E05ECD005B1650 /* BLEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEViewController.swift; sourceTree = "<group>"; };
+		0321A40E24E05ECD005B1650 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0321A41124E05ECD005B1650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0321A41324E05ECE005B1650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0321A41624E05ECE005B1650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0321A41824E05ECE005B1650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0321A41D24E05ECE005B1650 /* HomeOxygenAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeOxygenAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0321A42124E05ECE005B1650 /* HomeOxygenAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOxygenAppTests.swift; sourceTree = "<group>"; };
+		0321A42324E05ECE005B1650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0321A42824E05ECE005B1650 /* HomeOxygenAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeOxygenAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0321A42C24E05ECE005B1650 /* HomeOxygenAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOxygenAppUITests.swift; sourceTree = "<group>"; };
+		0321A42E24E05ECE005B1650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0321A43D24E11EC0005B1650 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		0321A43F24E11ED6005B1650 /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
+		0321A44224E129E1005B1650 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		0321A44524E141F1005B1650 /* DevicePeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePeripheral.swift; sourceTree = "<group>"; };
+		0321A44724E161B6005B1650 /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		0321A44924E167F8005B1650 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0321A44B24E279D0005B1650 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0321A44D24E27C65005B1650 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		0321A44F24E27E91005B1650 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		038C286024E2872C00A125E3 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		24207AB095125344B4A2E642 /* Pods_HomeOxygenAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeOxygenAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59F17348BA62F8F1682686EE /* Pods-HomeOxygenApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOxygenApp.release.xcconfig"; path = "Target Support Files/Pods-HomeOxygenApp/Pods-HomeOxygenApp.release.xcconfig"; sourceTree = "<group>"; };
+		6826A260EBF86325A6D1BCEC /* Pods-HomeOxygenApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOxygenApp.debug.xcconfig"; path = "Target Support Files/Pods-HomeOxygenApp/Pods-HomeOxygenApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8504F806052EE092315B6DA3 /* Pods-HomeOxygenApp-HomeOxygenAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOxygenApp-HomeOxygenAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-HomeOxygenApp-HomeOxygenAppUITests/Pods-HomeOxygenApp-HomeOxygenAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A590C62BE15A8EE657AD5429 /* Pods-HomeOxygenApp-HomeOxygenAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOxygenApp-HomeOxygenAppUITests.release.xcconfig"; path = "Target Support Files/Pods-HomeOxygenApp-HomeOxygenAppUITests/Pods-HomeOxygenApp-HomeOxygenAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AB0BB691CCB642CE58E20085 /* Pods_HomeOxygenApp_HomeOxygenAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeOxygenApp_HomeOxygenAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C556617C28067D3E3571CD32 /* Pods-HomeOxygenAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOxygenAppTests.release.xcconfig"; path = "Target Support Files/Pods-HomeOxygenAppTests/Pods-HomeOxygenAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DCF6AE69ACE5B2E106C8973A /* Pods_HomeOxygenApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeOxygenApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4845E2F339E1D5A36CD8636 /* Pods-HomeOxygenAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOxygenAppTests.debug.xcconfig"; path = "Target Support Files/Pods-HomeOxygenAppTests/Pods-HomeOxygenAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0321A40224E05ECD005B1650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9F63DDC093FB438ADE8415 /* Pods_HomeOxygenApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0321A41A24E05ECE005B1650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AA7A74ECC37614C8A0C28A7 /* Pods_HomeOxygenAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0321A42524E05ECE005B1650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F0CF4F4709BF98FBF634627 /* Pods_HomeOxygenApp_HomeOxygenAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0321A3FC24E05ECD005B1650 = {
+			isa = PBXGroup;
+			children = (
+				0321A44B24E279D0005B1650 /* GoogleService-Info.plist */,
+				0321A40724E05ECD005B1650 /* HomeOxygenApp */,
+				0321A42024E05ECE005B1650 /* HomeOxygenAppTests */,
+				0321A42B24E05ECE005B1650 /* HomeOxygenAppUITests */,
+				0321A40624E05ECD005B1650 /* Products */,
+				6E8D75EC8F7F0D937BF0DC66 /* Pods */,
+				2B9D0EB632EBCE57131CEFC7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0321A40624E05ECD005B1650 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0321A40524E05ECD005B1650 /* HomeOxygenApp.app */,
+				0321A41D24E05ECE005B1650 /* HomeOxygenAppTests.xctest */,
+				0321A42824E05ECE005B1650 /* HomeOxygenAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0321A40724E05ECD005B1650 /* HomeOxygenApp */ = {
+			isa = PBXGroup;
+			children = (
+				0321A44424E141CE005B1650 /* Models */,
+				0321A44124E129D1005B1650 /* Extensions */,
+				0321A43A24E11E65005B1650 /* Components */,
+				0321A40824E05ECD005B1650 /* AppDelegate.swift */,
+				0321A40A24E05ECD005B1650 /* SceneDelegate.swift */,
+				0321A40C24E05ECD005B1650 /* BLEViewController.swift */,
+				0321A44724E161B6005B1650 /* DeviceViewController.swift */,
+				0321A40E24E05ECD005B1650 /* SecondViewController.swift */,
+				0321A41024E05ECD005B1650 /* Main.storyboard */,
+				0321A41324E05ECE005B1650 /* Assets.xcassets */,
+				0321A41524E05ECE005B1650 /* LaunchScreen.storyboard */,
+				0321A41824E05ECE005B1650 /* Info.plist */,
+				0321A44924E167F8005B1650 /* LoginViewController.swift */,
+				0321A44D24E27C65005B1650 /* LoginVC.swift */,
+				038C286024E2872C00A125E3 /* TabBarVC.swift */,
+			);
+			path = HomeOxygenApp;
+			sourceTree = "<group>";
+		};
+		0321A42024E05ECE005B1650 /* HomeOxygenAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				0321A42124E05ECE005B1650 /* HomeOxygenAppTests.swift */,
+				0321A42324E05ECE005B1650 /* Info.plist */,
+			);
+			path = HomeOxygenAppTests;
+			sourceTree = "<group>";
+		};
+		0321A42B24E05ECE005B1650 /* HomeOxygenAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0321A42C24E05ECE005B1650 /* HomeOxygenAppUITests.swift */,
+				0321A42E24E05ECE005B1650 /* Info.plist */,
+			);
+			path = HomeOxygenAppUITests;
+			sourceTree = "<group>";
+		};
+		0321A43A24E11E65005B1650 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0321A43D24E11EC0005B1650 /* DeviceTableViewCell.swift */,
+				0321A43F24E11ED6005B1650 /* DeviceTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0321A44124E129D1005B1650 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0321A44224E129E1005B1650 /* UIColor.swift */,
+				0321A44F24E27E91005B1650 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0321A44424E141CE005B1650 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0321A44524E141F1005B1650 /* DevicePeripheral.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B9D0EB632EBCE57131CEFC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCF6AE69ACE5B2E106C8973A /* Pods_HomeOxygenApp.framework */,
+				AB0BB691CCB642CE58E20085 /* Pods_HomeOxygenApp_HomeOxygenAppUITests.framework */,
+				24207AB095125344B4A2E642 /* Pods_HomeOxygenAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E8D75EC8F7F0D937BF0DC66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6826A260EBF86325A6D1BCEC /* Pods-HomeOxygenApp.debug.xcconfig */,
+				59F17348BA62F8F1682686EE /* Pods-HomeOxygenApp.release.xcconfig */,
+				8504F806052EE092315B6DA3 /* Pods-HomeOxygenApp-HomeOxygenAppUITests.debug.xcconfig */,
+				A590C62BE15A8EE657AD5429 /* Pods-HomeOxygenApp-HomeOxygenAppUITests.release.xcconfig */,
+				F4845E2F339E1D5A36CD8636 /* Pods-HomeOxygenAppTests.debug.xcconfig */,
+				C556617C28067D3E3571CD32 /* Pods-HomeOxygenAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0321A40424E05ECD005B1650 /* HomeOxygenApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0321A43124E05ECE005B1650 /* Build configuration list for PBXNativeTarget "HomeOxygenApp" */;
+			buildPhases = (
+				A1BA7654936CE27D7E6072C5 /* [CP] Check Pods Manifest.lock */,
+				0321A40124E05ECD005B1650 /* Sources */,
+				0321A40224E05ECD005B1650 /* Frameworks */,
+				0321A40324E05ECD005B1650 /* Resources */,
+				F11B1863D32A79610C76A5CA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomeOxygenApp;
+			productName = HomeOxygenApp;
+			productReference = 0321A40524E05ECD005B1650 /* HomeOxygenApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0321A41C24E05ECE005B1650 /* HomeOxygenAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0321A43424E05ECE005B1650 /* Build configuration list for PBXNativeTarget "HomeOxygenAppTests" */;
+			buildPhases = (
+				59C51938C2CE15975F825C27 /* [CP] Check Pods Manifest.lock */,
+				0321A41924E05ECE005B1650 /* Sources */,
+				0321A41A24E05ECE005B1650 /* Frameworks */,
+				0321A41B24E05ECE005B1650 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0321A41F24E05ECE005B1650 /* PBXTargetDependency */,
+			);
+			name = HomeOxygenAppTests;
+			productName = HomeOxygenAppTests;
+			productReference = 0321A41D24E05ECE005B1650 /* HomeOxygenAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0321A42724E05ECE005B1650 /* HomeOxygenAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0321A43724E05ECE005B1650 /* Build configuration list for PBXNativeTarget "HomeOxygenAppUITests" */;
+			buildPhases = (
+				7938A59D148F6DB93DBA1EDA /* [CP] Check Pods Manifest.lock */,
+				0321A42424E05ECE005B1650 /* Sources */,
+				0321A42524E05ECE005B1650 /* Frameworks */,
+				0321A42624E05ECE005B1650 /* Resources */,
+				725D9FF8F12EF6D946271796 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0321A42A24E05ECE005B1650 /* PBXTargetDependency */,
+			);
+			name = HomeOxygenAppUITests;
+			productName = HomeOxygenAppUITests;
+			productReference = 0321A42824E05ECE005B1650 /* HomeOxygenAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0321A3FD24E05ECD005B1650 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Amr Mousa";
+				TargetAttributes = {
+					0321A40424E05ECD005B1650 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					0321A41C24E05ECE005B1650 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 0321A40424E05ECD005B1650;
+					};
+					0321A42724E05ECE005B1650 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 0321A40424E05ECD005B1650;
+					};
+				};
+			};
+			buildConfigurationList = 0321A40024E05ECD005B1650 /* Build configuration list for PBXProject "HomeOxygenApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0321A3FC24E05ECD005B1650;
+			productRefGroup = 0321A40624E05ECD005B1650 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0321A40424E05ECD005B1650 /* HomeOxygenApp */,
+				0321A41C24E05ECE005B1650 /* HomeOxygenAppTests */,
+				0321A42724E05ECE005B1650 /* HomeOxygenAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0321A40324E05ECD005B1650 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0321A41724E05ECE005B1650 /* LaunchScreen.storyboard in Resources */,
+				0321A41424E05ECE005B1650 /* Assets.xcassets in Resources */,
+				0321A44C24E279D0005B1650 /* GoogleService-Info.plist in Resources */,
+				0321A41224E05ECD005B1650 /* Main.storyboard in Resources */,
+				0321A44024E11ED6005B1650 /* DeviceTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0321A41B24E05ECE005B1650 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0321A42624E05ECE005B1650 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59C51938C2CE15975F825C27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomeOxygenAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		725D9FF8F12EF6D946271796 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeOxygenApp-HomeOxygenAppUITests/Pods-HomeOxygenApp-HomeOxygenAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeOxygenApp-HomeOxygenAppUITests/Pods-HomeOxygenApp-HomeOxygenAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HomeOxygenApp-HomeOxygenAppUITests/Pods-HomeOxygenApp-HomeOxygenAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7938A59D148F6DB93DBA1EDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomeOxygenApp-HomeOxygenAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1BA7654936CE27D7E6072C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomeOxygenApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F11B1863D32A79610C76A5CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeOxygenApp/Pods-HomeOxygenApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeOxygenApp/Pods-HomeOxygenApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HomeOxygenApp/Pods-HomeOxygenApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0321A40124E05ECD005B1650 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0321A44A24E167F8005B1650 /* LoginViewController.swift in Sources */,
+				0321A43E24E11EC0005B1650 /* DeviceTableViewCell.swift in Sources */,
+				0321A44324E129E1005B1650 /* UIColor.swift in Sources */,
+				0321A45024E27E91005B1650 /* UIViewController.swift in Sources */,
+				0321A44624E141F1005B1650 /* DevicePeripheral.swift in Sources */,
+				0321A44E24E27C66005B1650 /* LoginVC.swift in Sources */,
+				0321A40F24E05ECD005B1650 /* SecondViewController.swift in Sources */,
+				0321A44824E161B6005B1650 /* DeviceViewController.swift in Sources */,
+				0321A40D24E05ECD005B1650 /* BLEViewController.swift in Sources */,
+				0321A40924E05ECD005B1650 /* AppDelegate.swift in Sources */,
+				038C286124E2872C00A125E3 /* TabBarVC.swift in Sources */,
+				0321A40B24E05ECD005B1650 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0321A41924E05ECE005B1650 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0321A42224E05ECE005B1650 /* HomeOxygenAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0321A42424E05ECE005B1650 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0321A42D24E05ECE005B1650 /* HomeOxygenAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0321A41F24E05ECE005B1650 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0321A40424E05ECD005B1650 /* HomeOxygenApp */;
+			targetProxy = 0321A41E24E05ECE005B1650 /* PBXContainerItemProxy */;
+		};
+		0321A42A24E05ECE005B1650 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0321A40424E05ECD005B1650 /* HomeOxygenApp */;
+			targetProxy = 0321A42924E05ECE005B1650 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0321A41024E05ECD005B1650 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0321A41124E05ECD005B1650 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0321A41524E05ECE005B1650 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0321A41624E05ECE005B1650 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0321A42F24E05ECE005B1650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0321A43024E05ECE005B1650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0321A43224E05ECE005B1650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6826A260EBF86325A6D1BCEC /* Pods-HomeOxygenApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6R86SHCH3N;
+				INFOPLIST_FILE = HomeOxygenApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeOxygen.HomeOxygenApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0321A43324E05ECE005B1650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59F17348BA62F8F1682686EE /* Pods-HomeOxygenApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6R86SHCH3N;
+				INFOPLIST_FILE = HomeOxygenApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeOxygen.HomeOxygenApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0321A43524E05ECE005B1650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4845E2F339E1D5A36CD8636 /* Pods-HomeOxygenAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeOxygenAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeOxygen.HomeOxygenAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeOxygenApp.app/HomeOxygenApp";
+			};
+			name = Debug;
+		};
+		0321A43624E05ECE005B1650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C556617C28067D3E3571CD32 /* Pods-HomeOxygenAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeOxygenAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeOxygen.HomeOxygenAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeOxygenApp.app/HomeOxygenApp";
+			};
+			name = Release;
+		};
+		0321A43824E05ECE005B1650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8504F806052EE092315B6DA3 /* Pods-HomeOxygenApp-HomeOxygenAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeOxygenAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeOxygen.HomeOxygenAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HomeOxygenApp;
+			};
+			name = Debug;
+		};
+		0321A43924E05ECE005B1650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A590C62BE15A8EE657AD5429 /* Pods-HomeOxygenApp-HomeOxygenAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeOxygenAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeOxygen.HomeOxygenAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HomeOxygenApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0321A40024E05ECD005B1650 /* Build configuration list for PBXProject "HomeOxygenApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0321A42F24E05ECE005B1650 /* Debug */,
+				0321A43024E05ECE005B1650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0321A43124E05ECE005B1650 /* Build configuration list for PBXNativeTarget "HomeOxygenApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0321A43224E05ECE005B1650 /* Debug */,
+				0321A43324E05ECE005B1650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0321A43424E05ECE005B1650 /* Build configuration list for PBXNativeTarget "HomeOxygenAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0321A43524E05ECE005B1650 /* Debug */,
+				0321A43624E05ECE005B1650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0321A43724E05ECE005B1650 /* Build configuration list for PBXNativeTarget "HomeOxygenAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0321A43824E05ECE005B1650 /* Debug */,
+				0321A43924E05ECE005B1650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0321A3FD24E05ECD005B1650 /* Project object */;
+}

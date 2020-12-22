@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="220" id="d4z-2X-1Qp" customClass="DeviceTableViewCell" customModule="HomeOxygenApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d4z-2X-1Qp" id="ymG-Wm-6bx">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTU-t2-Ib3">
+                        <rect key="frame" x="20" y="218" width="374" height="2"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50606142241379315" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="2rz-2L-btY"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYF-zF-aEt">
+                        <rect key="frame" x="133.5" y="17" width="147.5" height="29"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inY-Cr-6oM">
+                        <rect key="frame" x="276" y="96" width="122" height="28"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="WFy-DF-I14"/>
+                            <constraint firstAttribute="width" constant="122" id="drO-Kv-re2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <state key="normal" title="Connect">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="connectToDevice" destination="d4z-2X-1Qp" eventType="touchUpInside" id="Oeh-1B-6hx"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cjJ-4Z-Ne4">
+                        <rect key="frame" x="16" y="60" width="100" height="100"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="Nlt-sn-7Qt"/>
+                            <constraint firstAttribute="height" constant="100" id="iBo-kZ-7WT"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431372549022" green="0.99215686274509807" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="inY-Cr-6oM" firstAttribute="centerY" secondItem="ymG-Wm-6bx" secondAttribute="centerY" id="2OG-XB-iWd"/>
+                    <constraint firstItem="oYF-zF-aEt" firstAttribute="centerX" secondItem="ymG-Wm-6bx" secondAttribute="centerX" id="7Ls-7F-e56"/>
+                    <constraint firstItem="cjJ-4Z-Ne4" firstAttribute="centerY" secondItem="ymG-Wm-6bx" secondAttribute="centerY" id="ErY-ea-nTx"/>
+                    <constraint firstAttribute="trailing" secondItem="inY-Cr-6oM" secondAttribute="trailing" constant="16" id="Ouw-Qm-6QF"/>
+                    <constraint firstItem="oYF-zF-aEt" firstAttribute="top" secondItem="ymG-Wm-6bx" secondAttribute="top" constant="17" id="d65-77-Gf3"/>
+                    <constraint firstItem="cjJ-4Z-Ne4" firstAttribute="leading" secondItem="ymG-Wm-6bx" secondAttribute="leading" constant="16" id="izM-w3-sPL"/>
+                    <constraint firstItem="CTU-t2-Ib3" firstAttribute="centerX" secondItem="ymG-Wm-6bx" secondAttribute="centerX" id="pez-rb-3WP"/>
+                    <constraint firstItem="CTU-t2-Ib3" firstAttribute="leading" secondItem="ymG-Wm-6bx" secondAttribute="leading" constant="20" id="rhq-dX-XLR"/>
+                    <constraint firstAttribute="bottom" secondItem="CTU-t2-Ib3" secondAttribute="bottom" id="tPq-cG-a2z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="connectButton" destination="inY-Cr-6oM" id="UxN-Jb-8Xi"/>
+                <outlet property="deviceImage" destination="cjJ-4Z-Ne4" id="uba-WP-4DJ"/>
+                <outlet property="deviceName" destination="oYF-zF-aEt" id="rrf-KH-lUx"/>
+            </connections>
+            <point key="canvasLocation" x="224.63768115942031" y="134.59821428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

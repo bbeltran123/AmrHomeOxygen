@@ -1,0 +1,6 @@
+framework module Pods_HomeOxygenAppTests {
+  umbrella header "Pods-HomeOxygenAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
