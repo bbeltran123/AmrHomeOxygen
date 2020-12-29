@@ -8,6 +8,9 @@ target 'HomeOxygenApp' do
   # Pods for HomeOxygenApp
 	pod 'Firebase/Auth'
 	pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'SideMenu'
+
 
   target 'HomeOxygenAppTests' do
     inherit! :search_paths

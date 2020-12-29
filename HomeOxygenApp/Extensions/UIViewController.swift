@@ -66,7 +66,7 @@ extension UIViewController {
     let alertController = UIAlertController(title: nil, message: "Please Wait...\n\n\n\n",
                                             preferredStyle: .alert)
     SaveAlertHandle.set(alertController)
-    let spinner = UIActivityIndicatorView(style: .whiteLarge)
+    let spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
     spinner.color = UIColor(ciColor: .black)
     spinner.center = CGPoint(x: alertController.view.frame.midX,
                              y: alertController.view.frame.midY)

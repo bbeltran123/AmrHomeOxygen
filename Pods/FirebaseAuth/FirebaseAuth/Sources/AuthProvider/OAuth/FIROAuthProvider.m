@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#import "FirebaseAuth/Sources/Public/FirebaseAuth/FIROAuthProvider.h"
+#import "FirebaseAuth/Sources/Public/FIROAuthProvider.h"
 #include <CommonCrypto/CommonCrypto.h>
-#import "FirebaseAuth/Sources/Public/FirebaseAuth/FIRFacebookAuthProvider.h"
-#import "FirebaseAuth/Sources/Public/FirebaseAuth/FIROAuthCredential.h"
+#import "FirebaseAuth/Sources/Public/FIRFacebookAuthProvider.h"
+#import "FirebaseAuth/Sources/Public/FIROAuthCredential.h"
 #import "FirebaseCore/Sources/Private/FirebaseCoreInternal.h"
 
 #import "FirebaseAuth/Sources/Auth/FIRAuthGlobalWorkQueue.h"
@@ -47,20 +47,10 @@ typedef void (^FIRHeadfulLiteURLCallBack)(NSURL *_Nullable headfulLiteURL,
  */
 NSString *const kHeadfulLiteURLStringFormat = @"https://%@/__/auth/handler?%@";
 
-/** @var kHeadfulLiteEmulatorURLStringFormat
-    @brief The format of the URL used to open the emulated headful lite page during sign-in.
- */
-NSString *const kHeadfulLiteEmulatorURLStringFormat = @"http://%@/emulator/auth/handler?%@";
-
 /** @var kauthTypeSignInWithRedirect
     @brief The auth type to be specified in the sign-in request with redirect request and response.
  */
 static NSString *const kAuthTypeSignInWithRedirect = @"signInWithRedirect";
-
-/** @var kCustomUrlSchemePrefix
-    @brief The prefix to append to the Firebase app ID custom callback scheme..
- */
-static NSString *const kCustomUrlSchemePrefix = @"app-";
 
 @implementation FIROAuthProvider {
   /** @var _auth
@@ -213,15 +203,8 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
   if (self) {
     _auth = auth;
     _providerID = providerID;
-    if (_auth.app.options.clientID) {
-      _callbackScheme = [[[_auth.app.options.clientID componentsSeparatedByString:@"."]
-                             reverseObjectEnumerator].allObjects componentsJoinedByString:@"."];
-    } else {
-      _callbackScheme = [kCustomUrlSchemePrefix
-          stringByAppendingString:[_auth.app.options.googleAppID
-                                      stringByReplacingOccurrencesOfString:@":"
-                                                                withString:@"-"]];
-    }
+    _callbackScheme = [[[_auth.app.options.clientID componentsSeparatedByString:@"."]
+                           reverseObjectEnumerator].allObjects componentsJoinedByString:@"."];
   }
   return self;
 }
@@ -289,24 +272,19 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                      }
                                      __strong __typeof__(self) strongSelf = weakSelf;
                                      NSString *bundleID = [NSBundle mainBundle].bundleIdentifier;
-                                     NSString *clientID = strongSelf->_auth.app.options.clientID;
-                                     NSString *appID = strongSelf->_auth.app.options.googleAppID;
+                                     NSString *clienID = strongSelf->_auth.app.options.clientID;
                                      NSString *apiKey =
                                          strongSelf->_auth.requestConfiguration.APIKey;
                                      NSMutableDictionary *urlArguments = [@{
                                        @"apiKey" : apiKey,
-                                       @"authType" : kAuthTypeSignInWithRedirect,
+                                       @"authType" : @"signInWithRedirect",
                                        @"ibi" : bundleID ?: @"",
+                                       @"clientId" : clienID,
                                        @"sessionId" : [strongSelf hashforString:sessionID],
                                        @"v" : [FIRAuthBackend authUserAgent],
                                        @"eventId" : eventID,
                                        @"providerId" : strongSelf->_providerID,
                                      } mutableCopy];
-                                     if (clientID) {
-                                       urlArguments[@"clientId"] = clientID;
-                                     } else {
-                                       urlArguments[@"appId"] = appID;
-                                     }
                                      if (strongSelf.scopes.count) {
                                        urlArguments[@"scopes"] =
                                            [strongSelf.scopes componentsJoinedByString:@","];
@@ -328,17 +306,9 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                      }
                                      NSString *argumentsString = [strongSelf
                                          httpArgumentsStringForArgsDictionary:urlArguments];
-                                     NSString *URLString;
-                                     if (strongSelf->_auth.requestConfiguration
-                                             .emulatorHostAndPort) {
-                                       URLString = [NSString
-                                           stringWithFormat:kHeadfulLiteEmulatorURLStringFormat,
-                                                            authDomain, argumentsString];
-                                     } else {
-                                       URLString =
-                                           [NSString stringWithFormat:kHeadfulLiteURLStringFormat,
-                                                                      authDomain, argumentsString];
-                                     }
+                                     NSString *URLString =
+                                         [NSString stringWithFormat:kHeadfulLiteURLStringFormat,
+                                                                    authDomain, argumentsString];
                                      if (completion) {
                                        NSCharacterSet *set =
                                            [NSCharacterSet URLFragmentAllowedCharacterSet];

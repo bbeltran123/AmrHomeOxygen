@@ -10,7 +10,7 @@
 		0321A40924E05ECD005B1650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A40824E05ECD005B1650 /* AppDelegate.swift */; };
 		0321A40B24E05ECD005B1650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A40A24E05ECD005B1650 /* SceneDelegate.swift */; };
 		0321A40D24E05ECD005B1650 /* BLEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A40C24E05ECD005B1650 /* BLEViewController.swift */; };
-		0321A40F24E05ECD005B1650 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A40E24E05ECD005B1650 /* SecondViewController.swift */; };
+		0321A40F24E05ECD005B1650 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A40E24E05ECD005B1650 /* HomeViewController.swift */; };
 		0321A41224E05ECD005B1650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0321A41024E05ECD005B1650 /* Main.storyboard */; };
 		0321A41424E05ECE005B1650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0321A41324E05ECE005B1650 /* Assets.xcassets */; };
 		0321A41724E05ECE005B1650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0321A41524E05ECE005B1650 /* LaunchScreen.storyboard */; };
@@ -19,15 +19,19 @@
 		0321A43E24E11EC0005B1650 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A43D24E11EC0005B1650 /* DeviceTableViewCell.swift */; };
 		0321A44024E11ED6005B1650 /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0321A43F24E11ED6005B1650 /* DeviceTableViewCell.xib */; };
 		0321A44324E129E1005B1650 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44224E129E1005B1650 /* UIColor.swift */; };
-		0321A44624E141F1005B1650 /* DevicePeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44524E141F1005B1650 /* DevicePeripheral.swift */; };
 		0321A44824E161B6005B1650 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44724E161B6005B1650 /* DeviceViewController.swift */; };
-		0321A44A24E167F8005B1650 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44924E167F8005B1650 /* LoginViewController.swift */; };
 		0321A44C24E279D0005B1650 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0321A44B24E279D0005B1650 /* GoogleService-Info.plist */; };
 		0321A44E24E27C66005B1650 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44D24E27C65005B1650 /* LoginVC.swift */; };
 		0321A45024E27E91005B1650 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321A44F24E27E91005B1650 /* UIViewController.swift */; };
 		038C286124E2872C00A125E3 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038C286024E2872C00A125E3 /* TabBarVC.swift */; };
 		7AA7A74ECC37614C8A0C28A7 /* Pods_HomeOxygenAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24207AB095125344B4A2E642 /* Pods_HomeOxygenAppTests.framework */; };
 		9F0CF4F4709BF98FBF634627 /* Pods_HomeOxygenApp_HomeOxygenAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0BB691CCB642CE58E20085 /* Pods_HomeOxygenApp_HomeOxygenAppUITests.framework */; };
+		CF86ECEC259B7B6E0000B895 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86ECEB259B7B6E0000B895 /* DataViewController.swift */; };
+		CF86ECF1259B7C3D0000B895 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86ECF0259B7C3D0000B895 /* HealthManager.swift */; };
+		CF86ECF9259B82600000B895 /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86ECF8259B82600000B895 /* DatabaseConnection.swift */; };
+		CF86ECFE259B83A80000B895 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86ECFD259B83A80000B895 /* Date+Extension.swift */; };
+		CF86ED03259B83E00000B895 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86ED02259B83E00000B895 /* ChangePasswordVC.swift */; };
+		CF86ED08259B83F90000B895 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86ED07259B83F90000B895 /* SideMenuView.swift */; };
 		FE9F63DDC093FB438ADE8415 /* Pods_HomeOxygenApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF6AE69ACE5B2E106C8973A /* Pods_HomeOxygenApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +57,7 @@
 		0321A40824E05ECD005B1650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0321A40A24E05ECD005B1650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0321A40C24E05ECD005B1650 /* BLEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEViewController.swift; sourceTree = "<group>"; };
-		0321A40E24E05ECD005B1650 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0321A40E24E05ECD005B1650 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0321A41124E05ECD005B1650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0321A41324E05ECE005B1650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0321A41624E05ECE005B1650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,9 +71,7 @@
 		0321A43D24E11EC0005B1650 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		0321A43F24E11ED6005B1650 /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
 		0321A44224E129E1005B1650 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		0321A44524E141F1005B1650 /* DevicePeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePeripheral.swift; sourceTree = "<group>"; };
 		0321A44724E161B6005B1650 /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
-		0321A44924E167F8005B1650 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0321A44B24E279D0005B1650 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0321A44D24E27C65005B1650 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0321A44F24E27E91005B1650 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,12 @@
 		A590C62BE15A8EE657AD5429 /* Pods-HomeOxygenApp-HomeOxygenAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOxygenApp-HomeOxygenAppUITests.release.xcconfig"; path = "Target Support Files/Pods-HomeOxygenApp-HomeOxygenAppUITests/Pods-HomeOxygenApp-HomeOxygenAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB0BB691CCB642CE58E20085 /* Pods_HomeOxygenApp_HomeOxygenAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeOxygenApp_HomeOxygenAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C556617C28067D3E3571CD32 /* Pods-HomeOxygenAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOxygenAppTests.release.xcconfig"; path = "Target Support Files/Pods-HomeOxygenAppTests/Pods-HomeOxygenAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		CF86ECEB259B7B6E0000B895 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		CF86ECF0259B7C3D0000B895 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		CF86ECF8259B82600000B895 /* DatabaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
+		CF86ECFD259B83A80000B895 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CF86ED02259B83E00000B895 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		CF86ED07259B83F90000B895 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		DCF6AE69ACE5B2E106C8973A /* Pods_HomeOxygenApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeOxygenApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4845E2F339E1D5A36CD8636 /* Pods-HomeOxygenAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOxygenAppTests.debug.xcconfig"; path = "Target Support Files/Pods-HomeOxygenAppTests/Pods-HomeOxygenAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,12 +154,12 @@
 				0321A40A24E05ECD005B1650 /* SceneDelegate.swift */,
 				0321A40C24E05ECD005B1650 /* BLEViewController.swift */,
 				0321A44724E161B6005B1650 /* DeviceViewController.swift */,
-				0321A40E24E05ECD005B1650 /* SecondViewController.swift */,
+				CF86ECEB259B7B6E0000B895 /* DataViewController.swift */,
+				0321A40E24E05ECD005B1650 /* HomeViewController.swift */,
 				0321A41024E05ECD005B1650 /* Main.storyboard */,
 				0321A41324E05ECE005B1650 /* Assets.xcassets */,
 				0321A41524E05ECE005B1650 /* LaunchScreen.storyboard */,
 				0321A41824E05ECE005B1650 /* Info.plist */,
-				0321A44924E167F8005B1650 /* LoginViewController.swift */,
 				0321A44D24E27C65005B1650 /* LoginVC.swift */,
 				038C286024E2872C00A125E3 /* TabBarVC.swift */,
 			);
@@ -181,6 +189,8 @@
 			children = (
 				0321A43D24E11EC0005B1650 /* DeviceTableViewCell.swift */,
 				0321A43F24E11ED6005B1650 /* DeviceTableViewCell.xib */,
+				CF86ED02259B83E00000B895 /* ChangePasswordVC.swift */,
+				CF86ED07259B83F90000B895 /* SideMenuView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -190,6 +200,7 @@
 			children = (
 				0321A44224E129E1005B1650 /* UIColor.swift */,
 				0321A44F24E27E91005B1650 /* UIViewController.swift */,
+				CF86ECFD259B83A80000B895 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -197,7 +208,8 @@
 		0321A44424E141CE005B1650 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0321A44524E141F1005B1650 /* DevicePeripheral.swift */,
+				CF86ECF0259B7C3D0000B895 /* HealthManager.swift */,
+				CF86ECF8259B82600000B895 /* DatabaseConnection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -466,16 +478,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0321A44A24E167F8005B1650 /* LoginViewController.swift in Sources */,
 				0321A43E24E11EC0005B1650 /* DeviceTableViewCell.swift in Sources */,
 				0321A44324E129E1005B1650 /* UIColor.swift in Sources */,
+				CF86ED08259B83F90000B895 /* SideMenuView.swift in Sources */,
+				CF86ED03259B83E00000B895 /* ChangePasswordVC.swift in Sources */,
 				0321A45024E27E91005B1650 /* UIViewController.swift in Sources */,
-				0321A44624E141F1005B1650 /* DevicePeripheral.swift in Sources */,
+				CF86ECEC259B7B6E0000B895 /* DataViewController.swift in Sources */,
 				0321A44E24E27C66005B1650 /* LoginVC.swift in Sources */,
-				0321A40F24E05ECD005B1650 /* SecondViewController.swift in Sources */,
+				0321A40F24E05ECD005B1650 /* HomeViewController.swift in Sources */,
 				0321A44824E161B6005B1650 /* DeviceViewController.swift in Sources */,
 				0321A40D24E05ECD005B1650 /* BLEViewController.swift in Sources */,
+				CF86ECF9259B82600000B895 /* DatabaseConnection.swift in Sources */,
 				0321A40924E05ECD005B1650 /* AppDelegate.swift in Sources */,
+				CF86ECF1259B7C3D0000B895 /* HealthManager.swift in Sources */,
+				CF86ECFE259B83A80000B895 /* Date+Extension.swift in Sources */,
 				038C286124E2872C00A125E3 /* TabBarVC.swift in Sources */,
 				0321A40B24E05ECD005B1650 /* SceneDelegate.swift in Sources */,
 			);

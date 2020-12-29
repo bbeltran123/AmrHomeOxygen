@@ -30,6 +30,16 @@ class DeviceTableViewCell: UITableViewCell {
         self.connectFunction = connectFunction
     }
     
+    func showConnected (_ connected: Bool) {
+        if(connected){
+            self.connectButton?.backgroundColor = UIColor(hex: "#4DA6A6")
+            self.connectButton?.setTitle("Connected", for: UIControl.State.normal)
+        }else {
+            self.connectButton?.backgroundColor = UIColor(hex: "#FFFFFF")
+            self.connectButton?.setTitle("Connect", for: UIControl.State.normal)
+        }
+    }
+    
     @IBAction func connectToDevice () {
         self.connectFunction()
     }

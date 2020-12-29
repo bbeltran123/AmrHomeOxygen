@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-#import "GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORPlatform.h"
+#import "GoogleDataTransport/GDTCORLibrary/Public/GDTCORPlatform.h"
 
 #import <sys/sysctl.h>
 
-#import "GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORAssert.h"
-#import "GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORConsoleLogger.h"
-#import "GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORReachability.h"
+#import "GoogleDataTransport/GDTCORLibrary/Public/GDTCORAssert.h"
+#import "GoogleDataTransport/GDTCORLibrary/Public/GDTCORConsoleLogger.h"
+#import "GoogleDataTransport/GDTCORLibrary/Public/GDTCORReachability.h"
 
 #import "GoogleDataTransport/GDTCORLibrary/Private/GDTCORRegistrar_Private.h"
 
@@ -179,17 +179,17 @@ NSString *_Nonnull GDTCORDeviceModel() {
 }
 
 NSData *_Nullable GDTCOREncodeArchive(id<NSSecureCoding> obj,
-                                      NSString *filePath,
+                                      NSString *archivePath,
                                       NSError *_Nullable *error) {
   BOOL result = NO;
-  if (filePath.length > 0) {
+  if (archivePath.length > 0) {
     result = [[NSFileManager defaultManager]
-              createDirectoryAtPath:[filePath stringByDeletingLastPathComponent]
+              createDirectoryAtPath:[archivePath stringByDeletingLastPathComponent]
         withIntermediateDirectories:YES
                          attributes:nil
                               error:error];
     if (result == NO || *error) {
-      GDTCORLogDebug(@"Attempt to create directory failed: path:%@ error:%@", filePath, *error);
+      GDTCORLogDebug(@"Attempt to create directory failed: path:%@ error:%@", archivePath, *error);
       return nil;
     }
   }
@@ -207,12 +207,12 @@ NSData *_Nullable GDTCOREncodeArchive(id<NSSecureCoding> obj,
       GDTCORLogDebug(@"Encoding an object failed: %@", *error);
       return nil;
     }
-    if (filePath.length > 0) {
-      result = [resultData writeToFile:filePath options:NSDataWritingAtomic error:error];
+    if (archivePath.length > 0) {
+      result = [resultData writeToFile:archivePath options:NSDataWritingAtomic error:error];
       if (result == NO || *error) {
-        GDTCORLogDebug(@"Attempt to write archive failed: path:%@ error:%@", filePath, *error);
+        GDTCORLogDebug(@"Attempt to write archive failed: path:%@ error:%@", archivePath, *error);
       } else {
-        GDTCORLogDebug(@"Writing archive succeeded: %@", filePath);
+        GDTCORLogDebug(@"Writing archive succeeded: %@", archivePath);
       }
     }
   } else {
@@ -222,12 +222,12 @@ NSData *_Nullable GDTCOREncodeArchive(id<NSSecureCoding> obj,
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
       resultData = [NSKeyedArchiver archivedDataWithRootObject:obj];
 #pragma clang diagnostic pop
-      if (filePath.length > 0) {
-        result = [resultData writeToFile:filePath options:NSDataWritingAtomic error:error];
+      if (archivePath.length > 0) {
+        result = [resultData writeToFile:archivePath options:NSDataWritingAtomic error:error];
         if (result == NO || *error) {
-          GDTCORLogDebug(@"Attempt to write archive failed: URL:%@ error:%@", filePath, *error);
+          GDTCORLogDebug(@"Attempt to write archive failed: URL:%@ error:%@", archivePath, *error);
         } else {
-          GDTCORLogDebug(@"Writing archive succeeded: %@", filePath);
+          GDTCORLogDebug(@"Writing archive succeeded: %@", archivePath);
         }
       }
     } @catch (NSException *exception) {
@@ -238,7 +238,7 @@ NSData *_Nullable GDTCOREncodeArchive(id<NSSecureCoding> obj,
                                userInfo:@{NSLocalizedFailureReasonErrorKey : errorString}];
     }
     GDTCORLogDebug(@"Attempt to write archive. successful:%@ URL:%@ error:%@",
-                   result ? @"YES" : @"NO", filePath, *error);
+                   result ? @"YES" : @"NO", archivePath, *error);
   }
   return resultData;
 }
@@ -278,32 +278,6 @@ id<NSSecureCoding> _Nullable GDTCORDecodeArchive(Class archiveClass,
     }
   }
   return unarchivedObject;
-}
-
-BOOL GDTCORWriteDataToFile(NSData *data, NSString *filePath, NSError *_Nullable *outError) {
-  BOOL result = NO;
-  if (filePath.length > 0) {
-    result = [[NSFileManager defaultManager]
-              createDirectoryAtPath:[filePath stringByDeletingLastPathComponent]
-        withIntermediateDirectories:YES
-                         attributes:nil
-                              error:outError];
-    if (result == NO || *outError) {
-      GDTCORLogDebug(@"Attempt to create directory failed: path:%@ error:%@", filePath, *outError);
-      return result;
-    }
-  }
-
-  if (filePath.length > 0) {
-    result = [data writeToFile:filePath options:NSDataWritingAtomic error:outError];
-    if (result == NO || *outError) {
-      GDTCORLogDebug(@"Attempt to write archive failed: path:%@ error:%@", filePath, *outError);
-    } else {
-      GDTCORLogDebug(@"Writing archive succeeded: %@", filePath);
-    }
-  }
-
-  return result;
 }
 
 @interface GDTCORApplication ()

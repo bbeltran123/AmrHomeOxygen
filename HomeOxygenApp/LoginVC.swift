@@ -20,6 +20,8 @@ class LoginVC: UIViewController {
   override func viewDidLoad() {
       let img = UIImage(named: "bg1")
       //containerView.layer.cornerRadius = 10
+    self.navigationController?.setNavigationBarHidden(true, animated: false)
+        containerView.layer.cornerRadius = 10
       signInButton.layer.cornerRadius = 18
       self.view.backgroundColor = UIColor(patternImage: img!)
   }

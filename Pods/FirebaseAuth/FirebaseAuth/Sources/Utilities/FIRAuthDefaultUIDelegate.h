@@ -15,10 +15,10 @@
  */
 
 #import <TargetConditionals.h>
-#if !TARGET_OS_OSX && !TARGET_OS_WATCHOS
+#if !TARGET_OS_OSX
 
 #import <Foundation/Foundation.h>
-#import "FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthUIDelegate.h"
+#import "FirebaseAuth/Sources/Public/FIRAuthUIDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

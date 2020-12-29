@@ -16,7 +16,7 @@
 
 #import "FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsAPIService.h"
 
-#import "FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsVersion.h"
+#import "FirebaseInstallations/Source/Library/Public/FIRInstallationsVersion.h"
 
 #if __has_include(<FBLPromises/FBLPromises.h>)
 #import <FBLPromises/FBLPromises.h>
@@ -26,7 +26,6 @@
 
 #import "FirebaseCore/Sources/Private/FirebaseCoreInternal.h"
 #import "FirebaseInstallations/Source/Library/Errors/FIRInstallationsErrorUtil.h"
-#import "FirebaseInstallations/Source/Library/Errors/FIRInstallationsHTTPError.h"
 #import "FirebaseInstallations/Source/Library/FIRInstallationsLogger.h"
 #import "FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsItem+RegisterInstallationAPI.h"
 
@@ -72,7 +71,7 @@ NS_ASSUME_NONNULL_END
 
 - (instancetype)initWithAPIKey:(NSString *)APIKey projectID:(NSString *)projectID {
   NSURLSession *URLSession = [NSURLSession
-      sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
+      sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
   return [self initWithURLSession:URLSession APIKey:APIKey projectID:projectID];
 }
 
@@ -334,8 +333,7 @@ NS_ASSUME_NONNULL_END
   return [FBLPromise attempts:1
       delay:1
       condition:^BOOL(NSInteger remainingAttempts, NSError *_Nonnull error) {
-        return [FIRInstallationsErrorUtil isAPIError:error
-                                        withHTTPCode:FIRInstallationsHTTPCodesServerInternalError];
+        return [FIRInstallationsErrorUtil isAPIError:error withHTTPCode:500];
       }
       retry:^id _Nullable {
         return [self URLRequestPromise:request];

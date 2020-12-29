@@ -18,7 +18,9 @@ class BLEViewController: UIViewController, CBPeripheralDelegate, CBCentralManage
     private var centralManager: CBCentralManager!
     private var peripherals: [CBPeripheral] = []
     private var selectedDevice: CBPeripheral?
-    
+    private let refreshControl = UIRefreshControl()
+
+    private var loading = true
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -28,14 +30,27 @@ class BLEViewController: UIViewController, CBPeripheralDelegate, CBCentralManage
         // Do any additional setup after loading the view.
         
         deviceTableView?.register(UINib(nibName: "DeviceTableViewCell", bundle: nil), forCellReuseIdentifier: "deviceCell")
+        self.refreshControl.addTarget(self, action: #selector(refreshDevices), for: UIControl.Event.valueChanged)
+
+        deviceTableView?.refreshControl = self.refreshControl
         centralManager = CBCentralManager(delegate: self, queue: nil)
+    }
+    
+    @objc func refreshDevices(sender:AnyObject)
+    {
+        self.loading = true
+        self.peripherals = []
+        self.selectedDevice = nil
+        self.centralManagerDidUpdateState(self.centralManager)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "deviceScreen")
         {
+            self.loading = false
             let deviceVC = segue.destination as! DeviceViewController
             deviceVC.device = self.selectedDevice
+            deviceTableView?.refreshControl?.endRefreshing()
         }
     }
     
@@ -92,7 +107,7 @@ class BLEViewController: UIViewController, CBPeripheralDelegate, CBCentralManage
 
 extension BLEViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return peripherals.count
+        return loading ? 0 : peripherals.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -113,10 +128,15 @@ extension BLEViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as! DeviceTableViewCell
+        if loading {
+            return cell
+        }
+        let connected = (peripherals[indexPath.row].state == CBPeripheralState.connected)
+
+        cell.showConnected(connected)
         
         cell.setDetails(name: "\(peripherals[indexPath.row].name!)", image: nil, connectFunction: {() -> (()) in
-            cell.connectButton?.backgroundColor = UIColor(hex: "#4DA6A6")
-            cell.connectButton?.setTitle("Connected", for: UIControl.State.normal)
+            cell.showConnected(true)
             self.centralManager.connect(self.peripherals[indexPath.row], options: nil)
             self.selectedDevice = self.peripherals[indexPath.row]
             self.performSegue(withIdentifier: "deviceScreen", sender: self)

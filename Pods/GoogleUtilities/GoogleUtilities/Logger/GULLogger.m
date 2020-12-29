@@ -129,7 +129,6 @@ __attribute__((no_sanitize("thread"))) BOOL GULIsLoggableLevel(GULLoggerLevel lo
 #ifdef DEBUG
 void GULResetLogger() {
   sGULLoggerOnceToken = 0;
-  sGULLoggerDebugMode = NO;
 }
 
 aslclient getGULLoggerClient() {
